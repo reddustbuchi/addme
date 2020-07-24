@@ -1,0 +1,52 @@
+VERSION BUILD=1005 RECORDER=CR
+SET !TIMEOUT_STEP 1
+SET !LOOP -100
+SET !ERRORIGNORE YES
+TAB CLOSEALLOTHERS
+SET !VAR1 EVAL("var min = 1; var max = 3; var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min; randomNumber;")
+SET !VAR2 EVAL("var min = 3; var max = 5; var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min; randomNumber;")
+SET !VAR3 EVAL("var min = 6; var max = 8; var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min; randomNumber;")
+TAB OPEN
+TAB T=2
+URL GOTO=https://bit.ly/2Wfupi8
+wait seconds=7
+TAG POS=3 TYPE=A ATTR=TXT:Home
+wait seconds=2
+TAB OPEN
+TAB T=3
+URL GOTO=https://addmefast.com/
+wait seconds=2
+TAB T=1
+URL GOTO=https://addmefast.com/free_points/facebook_post_like
+wait seconds={{!VAR3}}
+EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(2)>FORM>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV>DIV>DIV>CENTER:nth-of-type(2)>A>DIV" BUTTON=0 MODIFIERS="ctrl"
+TAB T=2
+wait seconds={{!VAR3}}
+TAG SELECTOR="._15ko._77li.touchable"
+wait seconds={{!VAR3}}
+TAB CLOSE
+TAB T=1
+wait seconds={{!VAR3}}
+TAB T=1
+URL GOTO=https://addmefast.com/free_points/facebook_post_like
+wait seconds={{!VAR3}}
+EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(2)>FORM>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV>DIV>DIV>CENTER:nth-of-type(2)>A>DIV" BUTTON=0 MODIFIERS="ctrl"
+TAB T=2
+wait seconds={{!VAR3}}
+TAG SELECTOR="._15ko._77li.touchable"
+wait seconds={{!VAR3}}
+TAB CLOSE
+TAB T=1
+wait seconds={{!VAR3}}
+TAB T=1
+URL GOTO=https://addmefast.com/free_points/facebook_post_like
+wait seconds={{!VAR3}}
+EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(2)>FORM>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV>DIV>DIV>CENTER:nth-of-type(2)>A>DIV" BUTTON=0 MODIFIERS="ctrl"
+TAB T=2
+wait seconds={{!VAR3}}
+TAG SELECTOR="._15ko._77li.touchable"
+wait seconds={{!VAR3}}
+TAB CLOSE
+TAB T=1
+
+
